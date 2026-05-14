@@ -8,7 +8,7 @@ function App() {
 
   // FETCH TASKS
   const fetchTasks = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/tasks/");
+    const response = await fetch("https://reformadotms.pythonanywhere.com/api/tasks/");
     const data = await response.json();
     setTasks(data);
   };
@@ -24,7 +24,7 @@ function App() {
       return;
     }
 
-    await fetch("http://127.0.0.1:8000/api/tasks/", {
+    await fetch("https://reformadotms.pythonanywhere.com/api/tasks/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
